@@ -1,7 +1,7 @@
 
 --Create contact table
 DROP TABLE contacts
-CREATE TABLE "contacts" (
+CREATE TABLE contacts (
     contact_id int   NOT NULL,
     first_name varchar(30)   NOT NULL,
     last_name varchar(30)   NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE "contacts" (
 
 --Create category table
 DROP TABLE category
-CREATE TABLE "category" (
+CREATE TABLE category (
     category_id varchar(10)   NOT NULL,
     category varchar(30)   NOT NULL,
     PRIMARY KEY (category_id)
@@ -21,7 +21,7 @@ CREATE TABLE "category" (
 
 --Create subcategory table
 DROP TABLE subcategory
-CREATE TABLE "subcategory" (
+CREATE TABLE subcategory (
     subcategory_id varchar(10)   NOT NULL,
     subcategory varchar(30)   NOT NULL,
     PRIMARY KEY (subcategory_id)
@@ -29,10 +29,10 @@ CREATE TABLE "subcategory" (
 
 --Create campaign table
 DROP TABLE campaign
-CREATE TABLE "campaign" (
+CREATE TABLE campaign (
     cf_id int NOT NULL,
     contact_id int NOT NULL,
-    company_name varchar(15) NOT NULL,
+    company_name varchar(40) NOT NULL,
     description text NOT NULL,
     goal float NOT NULL,
     pledge float NOT NULL,
@@ -51,6 +51,7 @@ CREATE TABLE "campaign" (
      
 );
 
+
 --view the table
 select * from contacts
 
@@ -62,20 +63,3 @@ select * from subcategory
 
 --view the table
 select * from campaign
-
-select campaign.country,category.category,campaign.outcome
-from campaign
-inner join category ON
-campaign.category_id=category.category_id
-where outcome='successful'
-group by campaign.country,category.category,campaign.outcome
-ORDER by campaign.country DESC;
-
-select campaign.country, count(*) as "Successful_Count"
-from campaign
-where outcome='successful'
-group by campaign.country
-ORDER by "Successful_Count" DESC;
-
-select 
-
