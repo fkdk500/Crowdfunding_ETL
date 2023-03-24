@@ -1,14 +1,18 @@
 # Crowdfunding_ETL
-Background:
+
+# Note Regarding Collaboration
+For this project, I collaborated with Fekadu Habteyohannes. We frequently met with each other and discussed code and strategy, and utilized each other's code for different aspects of the project. We are providing links to two separate github repositories containing two separate jupyter notebooks, but the code in the notebooks is nearly identical.  Here is a link to Andy Grimm repo: https://github.com/Grimmandrewj/Crowdfunding_ETL
+
+# Background:
 It is ETL mini project with aim of demonstrating:
     -Extract:Read the data, often from multiple sources(for this specfic case the source is excel file).
     -Transform:Clean and structure the data in desired form.
     -Load: Write the data into a database for storage
 
-Aim
+# Aim
 It is to practice building an ETL pipeline using Python, Pandas, and either Python dictionary methods or regular expressions to extract and transform the data. After you transform the data, you'll create four CSV files and use the CSV file data to create an ERD and a table schema. Finally, you’ll upload the CSV file data into a Postgres database.
 
-Instructions
+# Instructions
 The instructions for this mini project are divided into the following subsections:
     -Create the Category and Subcategory DataFrames
     -Create the Campaign DataFrame
